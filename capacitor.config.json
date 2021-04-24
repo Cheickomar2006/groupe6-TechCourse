@@ -1,0 +1,13 @@
+{
+  "appId": "project.group6.techcourse",
+  "appName": "Tech Course",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}

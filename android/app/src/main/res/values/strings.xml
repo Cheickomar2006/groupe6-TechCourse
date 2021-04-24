@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Tech Course</string>
+    <string name="title_activity_main">Tech Course</string>
+    <string name="package_name">project.group6.techcourse</string>
+    <string name="custom_url_scheme">project.group6.techcourse</string>
+</resources>

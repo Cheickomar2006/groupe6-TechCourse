@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start"><ion-back-button></ion-back-button></ion-buttons>
+    <ion-title class="ion-text-center">{{selectedCourse.title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-img [src]="selectedCourse.imageUrl"></ion-img>
+<ion-grid>
+  <ion-row>
+    <ion-col size="12" offsetsm="2">
+      <div class="ion-margin">
+        <h2 class="ion-text-center">Description</h2>
+        <p class="ion-text-justify">{{selectedCourse.description}} </p>
+      </div>
+      <ion-list>
+        <ion-item routerLink="./{{categoryId}} {{selectedCourse.id}} {{chapter.id}}" detail *ngFor="let chapter of selectedCourse.chapters" class="ion-margin">
+          <ion-label class="ion-margin">
+            <h2>{{chapter.title}}</h2>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>

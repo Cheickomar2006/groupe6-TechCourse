@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start"><ion-back-button></ion-back-button></ion-buttons>
+    <ion-title class="ion-text-center">{{selectedNote.title}} </ion-title>
+    <ion-buttons slot="primary" class="ion-margin-end"><ion-icon name="trash-outline" slot="icon-only" (click)="presentPopup()"></ion-icon></ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" offsetsm="2">
+        <div class="ion-margin">
+          <h2>{{selectedNote.date}}</h2>
+          <p class="ion-text-justify">{{selectedNote.content}}</p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,5 +1,7 @@
 {
   "name": "bit-pastry",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

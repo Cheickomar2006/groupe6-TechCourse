@@ -1,0 +1,39 @@
+<ion-menu side="start" menuId="first" contentId="main">
+  <ion-header>
+    <ion-toolbar color="warning">
+      <ion-title class="ion-text-center">Tech Course</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item routerLink="/stats">Stats</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+
+<ion-router-outlet id="main"></ion-router-outlet>
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start"><ion-icon name="menu-outline" slot="icon-only" (click)="openFirst()"></ion-icon></ion-buttons>
+    <ion-title class="ion-text-center">Notes</ion-title>
+    <ion-buttons slot="primary" class="ion-margin-end"><ion-icon name="add" slot="icon-only" routerLink="./new-note"></ion-icon></ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" offsetsm="2">
+        <ion-list *ngIf="notes">
+          <ion-item routerLink="./{{note.id}}" detail *ngFor="let note of notes" class="ion-margin">
+            <ion-label class="ion-margin">
+              <h2>{{note?.title}}</h2>
+              <p>{{note?.date}}</p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

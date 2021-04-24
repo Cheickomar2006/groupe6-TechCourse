@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start"><ion-back-button></ion-back-button></ion-buttons>
+    <ion-title class="ion-text-center">Stats</ion-title>
+    <ion-buttons slot="primary" class="ion-margin-end"><ion-icon name="refresh-outline" slot="icon-only" (click)="presentPopover()"></ion-icon></ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" offsetsm="2">
+        <ion-list>
+          <ion-item>
+            Viewed categories: {{categoriesStats}}
+          </ion-item>
+          <ion-item>
+            Viewed courses: {{coursesStats}}
+          </ion-item>
+          <ion-item>
+            Viewed chapters: {{chaptersStats}}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
